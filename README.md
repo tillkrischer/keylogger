@@ -3,9 +3,9 @@
 recording and playback for keyboard presses
 
 ## Dependencies
-xte (xautomation)
-xmodmap (xorg-xmodmap)
-xinput (xorg-xinput)
+- xte (xautomation)
+- xmodmap (xorg-xmodmap)
+- xinput (xorg-xinput)
 
 ## Usage
 ```

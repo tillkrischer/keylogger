@@ -15,7 +15,8 @@ for line in p.stdout:
     value = words[3] if len(words) > 3 else ""
     keycodes[key] = value
 
-isControlDown = False
+isLeftControlDown = False
+isRightControlDown = False
 f = open(args.output, "w")
 start = time.time()
 p = Popen(["xinput", "test", str(args.inputid)], stdout=PIPE)
@@ -23,9 +24,11 @@ for line in p.stdout:
     words = str(line).split()
     goingdown = words[1] == "press"
     key = keycodes.get(words[2])
-    if key == "Control_L" or key == "Control_R":
-        isControlDown = goingdown
-    if key == "q" and isControlDown:
+    if key == "Control_L":
+        isLeftControlDown = goingdown
+    if key == "Control_R":
+        isRightControlDown = goingdown
+    if key == "q" and (isLeftControlDown or isRightControlDown):
         break
     s = []
     s.append(str(time.time() - start))
@@ -33,4 +36,3 @@ for line in p.stdout:
     s.append(key)
     f.write(" ".join(s))
     f.write("\n")
-

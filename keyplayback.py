@@ -14,7 +14,7 @@ def parseLine(f):
 
 parser = argparse.ArgumentParser(description="Play back Keypresses.")
 parser.add_argument("input", type=str, help="input file")
-parser.add_argument("--speed", "-s", type=int, default=1, help="relative speed of playback")
+parser.add_argument("--speed", "-s", type=float, default=1, help="relative speed of playback")
 args = parser.parse_args()
 
 f = open(args.input, "r")

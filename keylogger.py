@@ -2,7 +2,7 @@ import time
 import argparse
 from subprocess import Popen, PIPE
 
-parser = argparse.ArgumentParser(description="Record Keypresses")
+parser = argparse.ArgumentParser(description="Record Keypresses. Ctrl+q to stop recording")
 parser.add_argument("inputid", type=int, help="input device id (xinput list)")
 parser.add_argument("output", type=str, help="output file")
 args = parser.parse_args()

@@ -11,7 +11,7 @@ recording and playback for keyboard presses
 ```
 usage: keylogger.py [-h] inputid output
 
-Record Keypresses
+Record Keypresses. Ctrl+q to stop recording
 
 positional arguments:
   inputid     input device id (xinput list)
@@ -25,7 +25,7 @@ optional arguments:
 ```
 usage: keyplayback.py [-h] [--speed SPEED] input
 
-Record Keypresses. Ctrl+q to stop recording
+Record Keypresses.
 
 positional arguments:
   input                 input file

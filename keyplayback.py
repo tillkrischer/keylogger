@@ -12,7 +12,7 @@ def parseLine(f):
         command = " ".join(words[1:])
         return (timestamp, command)
 
-parser = argparse.ArgumentParser(description="Record Keypresses.")
+parser = argparse.ArgumentParser(description="Play back Keypresses.")
 parser.add_argument("input", type=str, help="input file")
 parser.add_argument("--speed", "-s", type=int, default=1, help="relative speed of playback")
 args = parser.parse_args()

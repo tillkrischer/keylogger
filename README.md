@@ -25,7 +25,7 @@ optional arguments:
 ```
 usage: keyplayback.py [-h] [--speed SPEED] input
 
-Record Keypresses.
+Play back Keypresses.
 
 positional arguments:
   input                 input file
